@@ -1,0 +1,1 @@
+CREATE DATABASE IF NOT EXISTS laravel_start_pack_db;
