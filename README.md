@@ -1,8 +1,10 @@
-## Laravel Start Pack
+# Laravel Start Pack
 
-Laravel framework with DDD and TDD.
+## Laravel framework with DDD and TDD.
 
 docker-compose with laravel, mysql, nginx and redis.
+
+## Run project:
 
 Copy .env-example, create .env file and update database data.
 
@@ -15,11 +17,30 @@ DB_USERNAME=root
 DB_PASSWORD=root
 ```
 
+Run the project:
 
 `docker-compose up -d`
 
+Install dependencies
+
 `docker-compose exec app composer install`
+
+Set the application key 
 
 `docker-compose exec app php artisan key:generate`
 
+Migrate database
+
 `docker-compose exec app php artisan migrate`
+
+Run tests
+
+`docker-compose exec app php artisan test`
+
+## Customize:
+
+Database is created the first time you run the project, you can change the name in the file `.docker/mysql/initdb.sql`, remember to change the name in `.env` file too.
+
+## Details:
+
+to do: explain how things works
