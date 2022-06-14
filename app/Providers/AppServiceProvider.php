@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repositories\Eloquent\ExampleEloquentRepository;
+use Core\Domain\Repository\ExampleRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(
+            ExampleRepositoryInterface::class,
+            ExampleEloquentRepository::class
+        );
     }
 
     /**
