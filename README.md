@@ -43,4 +43,8 @@ Database is created the first time you run the project, you can change the name 
 
 ## Details:
 
-to do: explain how things works
+Uncommented DB_CONNECTION and DB_DATABASE on file `phpunit.xml` to run tests in sqlite
+
+Use trait `Illuminate\Foundation\Testing\RefreshDatabase` in file `tests/TestCase.php` to refresh test database everytime it runs
+
+Defined how to render and the code for custom exceptions in file `app/Exceptions/Handler.php`
